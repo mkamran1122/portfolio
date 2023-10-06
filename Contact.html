@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8148399001.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Style.css">
+    <title>Mohd - Portfolio</title>
+</head>
+
+<body>
+
+    <div class="contact-nav mq-contact-nav">
+        <h1 class="contact-nav-title mq-contact-nav-title">Muhammad Portfolio</h1>
+    </div>
+    <hr class="line">
+    <h2 class="head-title mq-head-title">Connect With Me</h2>
+    <!-- <hr class="contact-line mq-contact-line"> -->
+
+
+
+    <div class="main-link mq-main-link">
+        <a class="contact-link mq-contact-link gmail" href="mailto:muhammadkamran4122@gmail.com">
+            <i class="fa-regular fa-envelope-open icon mq-icon" style="color: #ea4335;"></i> 
+        </a>
+        <a class="contact-link mq-contact-link mq-hover-2" href="https://www.instagram.com/_hamoodiiiiii.x/">
+            <i class="fa-brands fa-instagram icon mq-icon" style="color: #e4405f;"></i> 
+        </a>
+        <a class="contact-link mq-contact-link mq-hover-3" href="https://www.linkedin.com/in/mohammad-kamran-b8188012a">
+            <i class="fa-brands fa-linkedin icon mq-icon" style="color: #0a66c2;"></i> 
+        </a>
+        <a class="contact-link mq-contact-link mq-hover-4" href="https://www.facebook.com/mohammed.albalushi.71697/">
+            <i class="fa-brands fa-facebook icon mq-icon" style="color: #1877f2;"></i> 
+        </a>
+    </div>
+
+
+    <!-- ----------------------------------------------------------------- -->
+
+    <div class="container-contact mq-container-contact">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3 class="mq-title">Get in Touch</h3>
+            <input class="mq-input" type="text" id="name" placeholder="name" required>
+            <input class="mq-input" type="email" id="email" placeholder="email address" required>
+            <input class="mq-input" type="text" id="phone" placeholder="phone no" required>
+            <textarea class="mq-textarea" id="requirement" rows="4" placeholder="your requirement"></textarea>
+            <button type="submit" class="mq-contact-btn">Push the Magic Button</button>
+        </form>
+    </div>
+
+    <!-- ----------------------------------------------------------------- -->
+
+
+    <footer class="footer">
+        <hr class="line">
+        <div class="footer-btn mq-footer-btn">
+            <button class="f-btn mq-f-btn" onclick="backHome()">Back to Home</button>
+        </div>
+    </footer>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "muhammadprince17@gmail.com",
+                Password: "",
+                To: 'muhammadkamran4122@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "Muhammad Portfolio",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+
+<script>
+    function backHome() {
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>
